@@ -61,8 +61,8 @@ if __name__ == "__main__":
     print_cat()
 
     input_msg = """
-    ** What would you like to order? **
-    ***********************************
+** What would you like to order? **
+***********************************
 
     """
     print(input_msg)
@@ -73,11 +73,11 @@ if __name__ == "__main__":
     while user_input!="quit":
         user_input=input(">")
         if user_input in order_dictionary:
-            order_dictionary[user_input]+=1
+            order_dictionary[user_input.lower()]+=1
         else:
-            order_dictionary[user_input]=1
+            order_dictionary[user_input.lower()]=1
         
         if user_input == "quit":
             print("Hope you are enjoyed in our resturant")
         else:
-            print(f"*** {order_dictionary[user_input]}  order of {user_input} have been added to your meal ***")
+            print(f"*** {order_dictionary[user_input.lower()]}  order of {user_input} have been added to your meal ***")
