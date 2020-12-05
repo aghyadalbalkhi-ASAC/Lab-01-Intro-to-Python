@@ -1,13 +1,10 @@
 def print_welcome_msg():
-    welcome_msg = """
-    **************************************
-    **    Welcome to the Snakes Cafe!   **
-    **    Please see our menu below.    **
-    **
-    ** To quit at any time, type "quit" **
-    **************************************
-
-    """
+    welcome_msg = """**************************************
+**    Welcome to the Snakes Cafe!   **
+**    Please see our menu below.    **
+**
+** To quit at any time, type "quit" **
+**************************************"""
     print(welcome_msg)
 
 def print_cat():
@@ -71,13 +68,15 @@ if __name__ == "__main__":
     order_dictionary={}
 
     while user_input!="quit":
-        user_input=input(">")
-        if user_input in order_dictionary:
-            order_dictionary[user_input.lower()]+=1
-        else:
-            order_dictionary[user_input.lower()]=1
         
-        if user_input == "quit":
+        user_input=input(">")
+        ItemChecked=user_input.lower()
+        if ItemChecked in order_dictionary:
+            order_dictionary[ItemChecked]+=1
+        else:
+            order_dictionary[ItemChecked]=1
+        
+        if ItemChecked == "quit":
             print("Hope you are enjoyed in our resturant")
         else:
-            print(f"*** {order_dictionary[user_input.lower()]}  order of {user_input} have been added to your meal ***")
+            print(f"*** {order_dictionary[user_input.lower()]}  order of {ItemChecked} have been added to your meal ***")
